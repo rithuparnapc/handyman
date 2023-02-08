@@ -1,0 +1,17 @@
+.masthead{
+   background-image: url(/src/assets/pexels-life-of-pix-2459.jpg); 
+   background-color:beige;
+background-repeat: no-repeat;
+background-size: cover;
+height: 500px;
+
+
+}
+.masthead-subheading {
+    margin-top: 300px;
+    font-size: 70px;
+}
+.masthead-heading{
+    font-size: 40px;
+   
+}

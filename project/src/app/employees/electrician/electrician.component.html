@@ -1,0 +1,51 @@
+
+
+<div class="ele-view">
+<div class="container">
+    <div class="row">
+        <div class="col-3 mb-5" *ngFor="let employee of electricians">
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.istockphoto.com/id/1297346500/video/talking-businessman-isolated-on-white-background.jpg?s=640x640&k=20&c=FZHMbhdHyuIyzZFooI9wlohdO_1OMlPzvp5_SwQNJfU=" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">{{employee.name}}</h4>
+                  <p class="card-text">{{employee.category}}<br>
+                  {{employee.location}}<br>
+                  {{employee.experience}}<br>
+                  {{employee.payment}}</p>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a slot</button>
+                </div>
+              </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Booking Slots</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Enter your details</h3>
+        <form action="">
+          <input type="text" placeholder="Your name" class="form-control mb-2">
+          <input type="text" placeholder="Address" class="form-control mb-2">
+          <input type="text" placeholder="location" class="form-control mb-2">
+          <input type="text" placeholder="Phone number" class="form-control mb-2">
+          <input type="date" class="form-control mb-2">
+          <input type="time" placeholder="time" class="form-control mb-2">
+          
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="toconfirmbooking()" class="btn btn-secondary" data-bs-dismiss="modal">confirm</button>
+        <button type="button" class="btn btn-primary">Pay</button>
+      </div>
+    </div>
+  </div>
+</div>
