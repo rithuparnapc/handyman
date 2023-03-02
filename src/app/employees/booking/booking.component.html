@@ -1,0 +1,77 @@
+<div class="row1  mt-5"*ngIf="houseitem.length==0" >
+    <div class="col-2"></div>
+    <div class="col-8">
+        <h1>no booking</h1>
+        <img class="container ml-5" src="https://media4.giphy.com/media/icksDwXFM85NTfbmIr/giphy.gif" alt="">
+    </div>
+    
+    <div class="col-2"></div>
+</div>
+<div class="row container mt-5" *ngFor="let housekeeper of houseitem">
+    <div class="col-4">
+
+    <div class="card-body"> <img height="200px" width="100px" src="https://previews.123rf.com/images/yupiramos/yupiramos1609/yupiramos160912725/62358447-avatar-woman-smiling-cartoon-female-person-user-vector-illustration.jpg" class="card-img-top" alt="...">
+        <h4 class="card-title">{{housekeeper.name}}</h4>
+        <p class="card-text">{{housekeeper.category}} <br>
+        {{housekeeper.location}}<br>
+        {{housekeeper.experience}}<br>
+        {{housekeeper.payment}}</p>
+        <button class="btn btn-primary" (click)="removehk(housekeeper)">cancel</button>
+        
+      </div>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-4"></div>
+
+</div>
+
+<div class="row container mt-5" *ngFor="let employee of eleitem">
+    <div class="col-4">
+       
+                <div class="card-body">
+                    <img src="https://media.istockphoto.com/id/1297346500/video/talking-businessman-isolated-on-white-background.jpg?s=640x640&k=20&c=FZHMbhdHyuIyzZFooI9wlohdO_1OMlPzvp5_SwQNJfU=" class="card-img-top" alt="...">
+                  <h4 class="card-title">{{employee.name}}</h4>
+                  <p class="card-text">{{employee.category}}<br>
+                  {{employee.location}}<br>
+                  {{employee.experience}}<br>
+                  {{employee.payment}}</p>
+  
+                  <button class="btn btn-primary" (click)="removebooking(employee)">cancel</button>
+                  
+                </div>
+    </div>
+    <div class="col-4"></div>
+    <div class="col-4"></div>
+</div>
+
+<div class="row container mt-5" *ngFor="let painter of paintitem">
+    <div class="col-4">
+        <div class="card-body">
+            <img src="https://media.istockphoto.com/id/1297346500/video/talking-businessman-isolated-on-white-background.jpg?s=640x640&k=20&c=FZHMbhdHyuIyzZFooI9wlohdO_1OMlPzvp5_SwQNJfU=" class="card-img-top" alt="...">
+          <h4 class="card-title">{{painter.name}}</h4>
+          <p class="card-text">{{painter.category}}<br>
+          {{painter.location}}<br>
+          {{painter.experience}}<br>
+          {{painter.payment}}</p>
+          <button class="btn btn-primary" (click)="removepainter(painter)">cancel</button>
+         
+        </div></div>
+    <div class="col-4"></div>
+    <div class="col-4"></div>
+</div>
+
+<div class="row  container mt-5" *ngFor="let plumber of pluitem">
+    <div class="col-4">
+        <div class="card-body">
+            <img src="https://media.istockphoto.com/id/1297346500/video/talking-businessman-isolated-on-white-background.jpg?s=640x640&k=20&c=FZHMbhdHyuIyzZFooI9wlohdO_1OMlPzvp5_SwQNJfU=" class="card-img-top" alt="...">
+          <h4 class="card-title">{{plumber.name}}</h4>
+          <p class="card-text">{{plumber.category}}<br>
+          {{plumber.location}}<br>
+          {{plumber.experience}}<br>
+          {{plumber.payment}}</p>
+          <button class="btn btn-primary" (click)="removeplumber(plumber)">cancel</button>
+          
+        </div></div>
+<div class="col-4"></div>
+<div class="col-4"></div>
+</div>

@@ -1,0 +1,33 @@
+
+
+<div class="row">
+    
+    <div class="col-4 container mt-5 shadow-lg p-5 mb-5 bg-body rounded " id="sign1">
+        <form [formGroup]="signupForm"  action="" class="text-center">
+            
+            
+           
+            <h1 class="text-secondary mt-3">Sign Up</h1>
+            
+            
+            <input formControlName="uname" name="username" type="text" id="uname" placeholder="Enter Your Name" class="form-control mt-2 shadow-lg">
+            <div *ngIf="this.signupForm.get('uname')?.errors && this.signupForm.get('uname')?.touched" style="color: brown;">Invalid Username</div>
+            <input formControlName="userid" name="userID" type="text "  id="userid" placeholder="User ID" class="form-control mt-2 shadow-lg">
+            <div *ngIf="this.signupForm.get('userid')?.errors && this.signupForm.get('userid')?.touched" style="color: brown;">Invalid userid</div>
+            <input formControlName="pswd" name="password" type="password"   id="pswd" placeholder="Password" class="form-control mt-2 shadow-lg">
+            <div *ngIf="this.signupForm.get('pswd')?.errors && this.signupForm.get('pswd')?.touched" style="color: brown;">Invalid password</div>
+            <div class="d-grid gap-2 col-4 mx-auto">
+            <input type="button" value="Sign Up" (click)="signup()" routerLink="employees/login" class="  container  btn btn-secondary   ml-3 mt-3" id="btns" style="text-align: center;">
+            </div><br>
+            <p>Already have an account?
+            <a routerLink="/" class=" text-decoration-none text-secondary">Login</a></p>
+    
+        </form>
+        
+    </div>
+    <div class="col-8">
+        <img src="https://niki-gebaeudeservice.de/wp-content/uploads/2022/03/niki_entry_collage.png" alt="">
+    </div>
+</div>
+<div class="row"></div>
+

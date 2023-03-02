@@ -1,0 +1,23 @@
+.masthead{
+   
+background-size: cover;
+height: 500px;
+
+
+}
+.masthead-subheading {
+    margin-top: 100px;
+    font-size: 70px;
+}
+.masthead-heading{
+    font-size: 40px;
+   
+}
+.col-md-3:hover{
+    transform: scale(1.25);
+    transition: 0.5;
+}
+.col-4:hover{
+    transform: scale(1.25);
+    transition: 0.5;
+}

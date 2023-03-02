@@ -1,0 +1,34 @@
+
+<div class="container">
+<div class="row">
+    
+    
+    <div class="col-4  mt-5 shadow-lg p-5 mb-5 bg-body rounded " id="log1">
+        <form  [formGroup]="loginForm"   action="" class="text-center">
+            
+            
+           
+            <h1 class="text-secondary mt-3">Login</h1>
+            
+            <input formControlName="userid" name="userID" type="text "  id="userid" placeholder="User ID" class="form-control mt-2 shadow-lg">
+            <div *ngIf="this.loginForm.get('userid')?.errors && this.loginForm.get('userid')?.touched" style="color: brown;">Invalid userid</div>
+            <input formControlName="pswd" name="password" type="password"   id="pswd" placeholder="Password" class="form-control mt-2 shadow-lg">
+            <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" style="color: brown;">Invalid password</div>
+          
+            <div class="d-grid gap-2 col-4 mx-auto">
+            <input type="button" value="Log in" (click)="login()"  class="  container  btn btn-secondary   ml-3 mt-3" id="btnl" style="text-align: center;">
+            </div><br>
+            <p>Don't have an account?
+            <a routerLink="/signup" class=" text-decoration-none text-secondary"> Sign Up</a></p>
+    
+        </form>
+        
+    </div>
+     <div class="col-8 mt-5 p-5">
+        <img  height="400px" width="" src="https://img.freepik.com/free-vector/plumber-repairing-pipe-burst-woman-phoning-service-stop-house-flooding_74855-14142.jpg?w=2000" alt="">
+    
+    </div>
+</div>
+</div>
+
+

@@ -1,0 +1,50 @@
+
+<div class="ele-view mt-5">
+  <div class="container mt-5">
+      <div class="row mt-5">
+          <div class="col-3 p-5 mb-5 container"*ngFor="let housekeeper of housekeepings ">
+              <div class="card  p-3" style="width: 18rem;">
+                  <img height="200px" src="https://previews.123rf.com/images/yupiramos/yupiramos1609/yupiramos160912725/62358447-avatar-woman-smiling-cartoon-female-person-user-vector-illustration.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title">{{housekeeper.name}}</h4>
+                    <p class="card-text">{{housekeeper.category}} <br>
+                    {{housekeeper.location}}<br>
+                    {{housekeeper.experience}}<br>
+                    {{housekeeper.payment}}</p>
+                    <button type="button" (click)="bookhk(housekeeper)" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a slot</button>
+                  </div>
+                </div>
+          </div>
+          </div>
+      </div>
+  </div>&nbsp;
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Booking Slots</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h3>Enter your details</h3>
+          <form action="">
+            <input type="text" placeholder="Your name" class="form-control mb-2">
+            <input type="text" placeholder="Address" class="form-control mb-2">
+            <input type="text" placeholder="location" class="form-control mb-2">
+            <input type="text" placeholder="Phone number" class="form-control mb-2">
+            <input type="date" class="form-control mb-2">
+            <input type="time" placeholder="time" class="form-control mb-2">
+            
+          </form>
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button"  class="btn btn-secondary" (click)="confirm()"  data-bs-dismiss="modal">confirm</button>
+          <button type="button" class="btn btn-primary">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
